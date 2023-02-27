@@ -98,6 +98,10 @@ impl Statistics {
     {
         self.data.iter().map(|r| f(r)).sum()
     }
+
+    pub fn get_average(&self) -> f32 {
+        self.get_total(|r| r.costs) / self.get_total(|r| r.liter)
+    }
 }
 
 #[cfg(test)]

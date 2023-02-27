@@ -28,6 +28,12 @@ fn main() {
     println!("Gesamtkosten: {:.2} Euro.", stats.get_total(|r| r.costs));
 
     println!();
-    println!("Verbrauch {:.2} Liter pro 100 km.", stats.get_consumption());
+    println!("Durchnittliche Kosten: {:.2} Euro pro Liter.", stats.get_average());
+
+    println!();
+    println!("Verbrauch: {:.2} Liter pro 100 km.", stats.get_consumption());
+
+    println!();
+    println!("Kosten: {:.2} Euro pro 100 km.", stats.get_consumption() * stats.get_average());
     println!();
 }
